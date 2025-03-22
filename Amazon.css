@@ -11,7 +11,7 @@ body {
 
 /* Header Styles */
 .header {
-  background-color: #131921;
+  background-color: #242f3e;
   color: white;
 }
 .header-container {
@@ -51,8 +51,12 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .nav-item p {
   font-size: 12px;
+}
+.nav-item:hover{
+  border: 1px solid white;
 }
 .nav-item span {
   font-weight: bold;
@@ -69,7 +73,7 @@ body {
 
 /* Secondary Nav Bar */
 .nav-menu {
-  background-color: #232f3e;
+  background-color: #0a1c31;
 }
 .nav-menu ul {
   display: flex;
@@ -174,17 +178,24 @@ body {
   right: 0;
   width: 200px;
   padding: 10px;
+  border: 1px solid;
+  border-radius:2px;
   z-index: 999;
 }
 .mobile-nav ul {
   list-style: none;
+
 }
 .mobile-nav ul li {
   margin-bottom: 10px;
+ 
 }
 .mobile-nav ul li a {
   color: white;
   text-decoration: none;
+}
+.mobile-nav ul li a:hover{
+  border-bottom: 2px solid white;
 }
 
 /* Show class controlled by JS */
