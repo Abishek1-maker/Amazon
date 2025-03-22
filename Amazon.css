@@ -1,57 +1,204 @@
-body{
-    margin: 0;
-    padding: 0;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#divheader{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: rgba(3, 0, 34, 0.835);
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3e6e6;
 }
-#div2{
-    margin:30px 0px 0px 200px;
-    display: flex;
-    gap: 10px;
-    background-color: rgba(45, 40, 98, 0.981);
-    height: 35px;
-}
-#input1{
-    height: 30px;
-    width: 450px;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-#button1{
-    margin-top: 2px;
-    height:30px ;
-    border-radius: 3px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-#img1{
-    margin-left: 0;
-    height: 70px;
-    width: 140px;
-    cursor: pointer;
-}
-#div3{
-    display: flex;
-    position: absolute;
-    margin: 70px 0px 0px 0px;
-    width: 100%;
-    height: fit-content;
-    background-color: rgb(4, 4, 20);
-}
-#ul1{
- display: flex;
- list-style: none;
- gap: 15px;
 
+/* Header Styles */
+.header {
+  background-color: #131921;
+  color: white;
 }
-a{
-    text-decoration: none;
-    color: white;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
-a:hover{
-    border: 1px solid white;
+.logo img {
+  width: 100px;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  margin: 0 20px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #febd69;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.search-bar button i {
+  font-size: 16px;
+}
+
+.nav-options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-item p {
+  font-size: 12px;
+}
+.nav-item span {
+  font-weight: bold;
+  font-size: 14px;
+}
+.cart {
+  display: flex;
+  align-items: center;
+}
+.cart i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+/* Secondary Nav Bar */
+.nav-menu {
+  background-color: #232f3e;
+}
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+}
+.nav-menu li {
+  margin-right: 20px;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Products Section */
+.products-section {
+  padding: 20px;
+}
+.products-section h2 {
+  margin-bottom: 20px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+.product-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.product-card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.product-card .price {
+  color: #b12704;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.product-card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.product-card button:hover {
+  background-color: #ddb347;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #131921;
+  color: white;
+  font-size: 14px;
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #232f3e;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: 10px;
+  z-index: 999;
+}
+.mobile-nav ul {
+  list-style: none;
+}
+.mobile-nav ul li {
+  margin-bottom: 10px;
+}
+.mobile-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Show class controlled by JS */
+.mobile-nav.show {
+  display: flex;
+}
+
+/* Responsive to show toggle button */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+  }
+
+  .mobile-toggle {
+      display: block;
+  }
 }

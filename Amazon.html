@@ -1,40 +1,134 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nepal Amazon</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./Amazon.css" />
+  
+  <!-- FontAwesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./Amazon.css">
-    </head>
-    <body>
-        <header>
-            <div id="divheader">
-            <div id="div1">
-                <img id="img1"  src="./amazon-logo-1024x683.png-1.webp" alt="Amazon logo">
-            </div>
-            <div id="div2">
-                <form action="">
-                <input id="input1" type="text" placeholder="Search">
-                <button id="button1">Search</button>
-                </form>
-                </div>
-                <div id="div3">
-                    <nav id="nav">
-                        <ul id="ul1">
-                        <li><a href="#">Today's Deals</a></li>
-                        <li><a href="#">Customer Service</a></li>
-                        <li><a href="#">Registry</a></li>
-                        <li><a href="#">Sell</a></li>
-                        <li><a href="#">Gifts card</a></li>
-                        </ul>
-                    </nav>
-                    </div>
-                </div>
-        </header>
-         
-        <script src="./Amazon.js" ></script>
-    </body>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="./images/amazon-logo.png" alt="Nepal Amazon">
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search Nepali products...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <!-- Nav Options -->
+      <div class="nav-options">
+        <div class="nav-item">
+          <p>Hello, Sign in</p>
+          <span>Account & Lists</span>
+        </div>
+        <div class="nav-item">
+          <p>Returns</p>
+          <span>& Orders</span>
+        </div>
+        <div class="nav-item cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="buttom" class="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">All</a></li>
+        <li><a href="#">Today's Deals</a></li>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">Registry</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Sell</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile" class="mobile-nav">
+      <ul>
+        <li><a href="#">All</a></li>
+        <li><a href="#">Today's Deals</a></li>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">Registry</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Sell</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Hero Banner">
+  </section>
+
+  <!-- Product Section -->
+  <main class="products-section">
+    <h2>Recommended for you in Nepal</h2>
+    <div class="product-grid">
+      <!-- Product Card -->
+      <div class="product-card">
+        <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Product 1">
+        <p>Himalayan Handmade Wool Shawl</p>
+        <span class="price">Rs. 2,500</span>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product Card -->
+      <div class="product-card">
+        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Product 2">
+        <p>Organic Nepali Tea (100g)</p>
+        <span class="price">Rs. 500</span>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product Card -->
+      <div class="product-card">
+        <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Product 3">
+        <p>Handmade Lokta Paper Diary</p>
+        <span class="price">Rs. 1,200</span>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product Card -->
+      <div class="product-card">
+        <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Product 4">
+        <p>Thangka Painting Wall Decor</p>
+        <span class="price">Rs. 6,000</span>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Nepal Amazon. Inspired by Amazon.com</p>
+  </footer>
+
+  <script src="./Amazon.js"></script>
+</body>
 </html>
